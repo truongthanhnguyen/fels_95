@@ -4,3 +4,10 @@ en:
     logo: "E-Learning"
     home: "Home"
     login: "Log in"
+  staticpage:
+    signup: "Sign up now"
+  user:
+    signup: "Sign up"
+  welcom: "Welcome to the E-Learning App!"
+  share:
+    formcontain: "The form contains"
