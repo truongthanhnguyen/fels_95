@@ -17,3 +17,4 @@ en:
     formcontain: "The form contains"
   danger: "Invalid email/password combination"
   createacc: "Create my account"
+  rememberme: "Remember me on this computer"
