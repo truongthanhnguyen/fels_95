@@ -3,7 +3,11 @@ en:
   layout:
     logo: "E-Learning"
     home: "Home"
-    login: "Log in"
+    user: "Users"
+  login: "Log in"
+  logout: "Log out"
+  profile: "Profile"
+  setting: "Settings"
   staticpage:
     signup: "Sign up now"
   user:
@@ -11,3 +15,5 @@ en:
   welcom: "Welcome to the E-Learning App!"
   share:
     formcontain: "The form contains"
+  danger: "Invalid email/password combination"
+  createacc: "Create my account"
