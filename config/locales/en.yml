@@ -26,3 +26,5 @@ en:
   pleaselogin: "Please log in."
   edit: 
     change: "change"
+  user:
+    all: "All users"
