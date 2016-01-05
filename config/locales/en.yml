@@ -18,3 +18,11 @@ en:
   danger: "Invalid email/password combination"
   createacc: "Create my account"
   rememberme: "Remember me on this computer"
+
+  edit: "Edit user"
+  updateprof:  "Update your profile"
+  profupdated: "Profile updated"
+  savechanges: "Save changes"
+  pleaselogin: "Please log in."
+  edit: 
+    change: "change"
