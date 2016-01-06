@@ -28,3 +28,18 @@ en:
     change: "change"
   user:
     all: "All users"
+  mailer:
+    subject: "Account activation"
+    accountactivate: "Welcome to the Sample App! Click on the link below to activate your account:"
+    hi: "Hi"
+    activate: "Activate"
+    accountactivation: "Account activation"
+  activate:
+    activated: "Account activated!"
+    invalid: "Invalid activation link"
+    accountactivate: "Please check your email to activate your account."
+    notactivated: "Account not activated."
+    checkyouremail: "Check your email for the activation link."
+    
+
+    
