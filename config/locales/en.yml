@@ -56,3 +56,8 @@ en:
     pass_has_been_reset: "Password has been reset."
     password_reset_has_expired: "Password reset has expired."
     confirm: "Confirmation"
+
+  activity:
+    Activities: "Activities"
+    posted: "Posted"
+    ago: "ago."

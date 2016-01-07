@@ -1,1 +1,4 @@
 gravatarsize: 50
+length_activity:
+  maximum: 140
+perpage: 5
