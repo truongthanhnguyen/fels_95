@@ -12,7 +12,14 @@ en:
     signup: "Sign up now"
   user:
     signup: "Sign up"
+  rails_logo: "Rails logo"
+  rails.png: "rails.png"
+
   welcom: "Welcome to the E-Learning App!"
+  welcom1: "This is the home page of E_learning - Project from framgia. Use"
+  ruby_on_rails: "Ruby on Rails"
+  welcom2: "to do this project"
+
   share:
     formcontain: "The form contains"
   danger: "Invalid email/password combination"
@@ -24,7 +31,7 @@ en:
   profupdated: "Profile updated"
   savechanges: "Save changes"
   pleaselogin: "Please log in."
-  edit: 
+  edit:
     change: "change"
   user:
     all: "All users"
@@ -45,8 +52,8 @@ en:
     notactivated: "Account not activated."
     checkyouremail: "Check your email for the activation link."
   password:
-    forgotpass: "(forgot password)" 
-    forgotpass2: "Forgot Password" 
+    forgotpass: "(forgot password)"
+    forgotpass2: "Forgot Password"
     submit: "Submit"
     emailsent: "Email sent with password reset instructions"
     adress_not_found: "Email address not found"
@@ -59,5 +66,12 @@ en:
 
   activity:
     Activities: "Activities"
+    activity: "activity"
     posted: "Posted"
     ago: "ago."
+    view_my_profile: "View my profile"
+    activity_created: "activity created!"
+    post: "Post"
+    activities_show: "Activities Show"
+    category: "Category"
+    lesson: "Lesson"
