@@ -4,19 +4,10 @@
       <section class="user_info">
         <%= render "shared/user_info" %>
       </section>
-      <section>
-        <div>
-          <h1><%= link_to t("activity.category"), "#" %></h1>
-        </div>
-        <div>
-          <h1><%= link_to t("activity.lesson"), "#" %></h1>
-        </div>
+      <section class="stats">
+        <%= render "shared/stats" %>
       </section>
     </aside>
-    <div class="col-md-8">
-      <h3><%= t "activity.activities_show" %></h3>
-      <%= render "shared/feed" %>
-    </div>
   </div>
 <% else %>
   <div class="center jumbotron">
@@ -27,6 +18,5 @@
     </h2>
     <%= link_to t("staticpage.signup"), signup_path, class: "btn btn-lg btn-primary" %>
   </div>
-  <%= link_to image_tag("rails.png", alt: t("rails_logo")),
-    "http://rubyonrails.org/images/rails.png" %>
+  <%= link_to image_tag("rails.png", alt: t("rails_logo")), "http://rubyonrails.org/images/rails.png" %>
 <% end %>
