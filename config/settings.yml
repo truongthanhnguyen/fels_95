@@ -2,3 +2,11 @@ gravatarsize: 50
 length_activity:
   maximum: 140
 perpage: 5
+word:
+  all_word: 0
+  learned_word: 1
+  not_learned_word: 2
+  status:
+    - All
+    - Learned
+    - Not Learned

@@ -11,9 +11,9 @@ User.create!(name: "Example User", email: "example@railstutorial.org",
     activated_at: Time.zone.now
 end
 
-users = User.order(:created_at).take(6)
-30.times do
-  content = Faker::Lorem.sentence(5)
+users = User.order(:created_at).take(1)
+20.times do
+  content = "you've learned 10 words"
   users.each {|user| user.activities.create!(content: content)}
 end
 
