@@ -25,6 +25,7 @@ en:
   danger: "Invalid email/password combination"
   createacc: "Create my account"
   rememberme: "Remember me on this computer"
+  rails_logo: "Rails logo"
 
   edit: "Edit user"
   updateprof:  "Update your profile"
@@ -65,7 +66,7 @@ en:
     confirm: "Confirmation"
 
   activity:
-    Activities: "Activities"
+    activities: "Activities"
     activity: "activity"
     posted: "Posted"
     ago: "ago."
@@ -75,3 +76,9 @@ en:
     activities_show: "Activities Show"
     category: "Category"
     lesson: "Lesson"
+
+  relationship:
+    following: "following"
+    followers: "followers"
+    follow: "Follow"
+    unfollow: "Unfollow"

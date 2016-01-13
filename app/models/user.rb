@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
     foreign_key: "follower_id", dependent: :destroy
   has_many :passive_relationships, class_name: Relationship.name,
     foreign_key: "followed_id", dependent: :destroy
-  has_many :following, through: :active_follows,  source: :followed
-  has_many :followers, through: :passive_follows, source: :follower
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
   has_many :lessons
 
   validates :email, presence: true, length: {maximum: 255},
@@ -66,6 +66,18 @@ class User < ActiveRecord::Base
 
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  def follow other_user
+    active_relationships.create followed_id: other_user.id
+  end
+
+  def unfollow other_user
+    active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  def following? other_user
+    following.include? other_user
   end
 
   private
