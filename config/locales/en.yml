@@ -69,7 +69,7 @@ en:
     activities: "Activities"
     activity: "activity"
     posted: "Posted"
-    ago: "ago."
+    ago: " ago."
     view_my_profile: "View my profile"
     activity_created: "activity created!"
     post: "Post"
@@ -83,11 +83,21 @@ en:
     follow: "Follow"
     unfollow: "Unfollow"
     word: "Words"
+
+  word:
+    filter: "Filter"
+
   category:
     category1: "Category"
     user_info: "User info"
     learned: "Learned"
     words: "words"
     you_learned: "you've learned"
-  word:
-    filter: "Filter"
+    all: "All Category"
+    name: "Name"
+    description: "Description"
+    start: "start"
+    lesson: "Lessons"
+    word: "Words"
+    user_info: "User info"
+    learned: "learned "

@@ -23,3 +23,17 @@ following = users[2..50]
 followers = users[3..40]
 following.each {|followed| user.follow(followed)}
 followers.each {|follower| follower.follow(user)}
+
+category_list = [["Basic", "text text text text text text text text text text
+  text text text text text text text text text text text text text text text
+  text text text text"],
+  ["Advance", "text text text text text text text text text text text text
+  text text text text text text text text text text text text text text
+  text text text"],
+  ["Master", "text text text text text text text text text text text text
+  text text text text text text text text text text text text text text
+  text text text"]]
+
+  category_list.each do |name, description|
+    Category.create(name: name, description: description)
+  end

@@ -9,7 +9,7 @@
           <h1><%= link_to t("activity.word"), words_path %></h1>
         </div>
         <div>
-          <h1><%= link_to t("activity.lesson"), "#" %></h1>
+          <h1><%= link_to t("activity.lesson"), categories_path %></h1>
         </div>
       </section>
     </aside>
@@ -27,5 +27,6 @@
     </h2>
     <%= link_to t("staticpage.signup"), signup_path, class: "btn btn-lg btn-primary" %>
   </div>
-  <%= link_to image_tag("rails.png", alt: t("rails_logo")), "http://rubyonrails.org/images/rails.png" %>
+  <%= link_to image_tag("rails.png", alt: t("rails_logo")),
+    "http://rubyonrails.org/images/rails.png" %>
 <% end %>
