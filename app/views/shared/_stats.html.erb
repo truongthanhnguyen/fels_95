@@ -1,15 +1,15 @@
 <% @user ||= current_user %>
 <div class="stats">
-  <a href="#">
+  <a href= "">
     <strong id="following" class="stat">
       <%= @user.following.count %>
     </strong>
-    <%= t "relationship.following" %>
+    <%= link_to t("relationship.following"), relationships_path(id: @user.id, type: "following") %>
   </a>
-  <a href="#">
+  <a href="">
     <strong id="followers" class="stat">
       <%= @user.followers.count %>
     </strong>
-    <%= t "relationship.followers" %>
+    <%= link_to t("relationship.followers"), relationships_path(id: @user.id, type: "followers") %>
   </a>
 </div>
