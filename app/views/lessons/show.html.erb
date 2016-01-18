@@ -1,0 +1,7 @@
+<h1><%= t "lesson.lesson" %></h1>
+<%= form_for @lesson do |f| %>
+  <%= f.fields_for :results do |builder| %>
+    <%= render "results_field", f: builder %>
+  <% end %>
+  <p><%= f.submit :submit %></p>
+<% end %>

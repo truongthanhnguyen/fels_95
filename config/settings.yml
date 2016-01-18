@@ -10,3 +10,5 @@ word:
     - All
     - Learned
     - Not Learned
+lesson:
+  lessonsize: 10

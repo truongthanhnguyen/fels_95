@@ -8,6 +8,7 @@ en:
   logout: "Log out"
   profile: "Profile"
   setting: "Settings"
+  error: "Error"
   staticpage:
     signup: "Sign up now"
   user:
@@ -86,6 +87,7 @@ en:
 
   word:
     filter: "Filter"
+    not_enough: "not enough words"
 
   category:
     category1: "Category"
@@ -101,3 +103,7 @@ en:
     word: "Words"
     user_info: "User info"
     learned: "learned "
+  lesson:
+    lesson: "Lesson"
+    create_lesson_success: "create lesson successed!"
+
