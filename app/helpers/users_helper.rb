@@ -6,4 +6,8 @@ module UsersHelper
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
     image_tag gravatar_url, alt: user.name, class: "gravatar"
   end
+
+  def get_number_of_words_learned user
+    Word.learned(user.id).count
+  end
 end

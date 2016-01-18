@@ -1,2 +1,5 @@
 <%= link_to gravatar_for(current_user, size: Settings.gravatarsize), current_user %>
-<h1><%= current_user.name %></h1></br>
+<h1><%= current_user.name %></h1>
+<%= t "category.you_learned" %>
+<%= get_number_of_words_learned current_user %>
+<%= t "category.words" %>
