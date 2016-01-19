@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   resources :activities, only: [:create, :destroy]
   resources :relationships, only: [:index, :create, :destroy]
   resources :words, only: [:index, :create, :destroy]
-  resources :categories
+  resources :categories do
+    resources :lessons, only: [:index]
+  end
+  resources :lessons, only: [:show, :update]
 end

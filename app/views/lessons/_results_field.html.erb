@@ -1,0 +1,10 @@
+<div class>
+  <div><b><%= f.object.word.name %></b></div>
+  <div class="row">
+    <% f.object.word.answers.each_with_index do |answer, index| %>
+      <%= f.radio_button :answer_id, answer.id, checked: index == 0 %>
+      <%= answer.name %>
+    <% end %>
+  </div>
+  </br>
+</div>

@@ -37,3 +37,20 @@ category_list = [["Basic", "text text text text text text text text text text
   category_list.each do |name, description|
     Category.create(name: name, description: description)
   end
+
+category = Category.all
+category.each do |category|
+  30.times do |n|
+    name = Faker::Lorem.word
+    Word.create(name: name, category_id: category.id)
+  end
+end
+
+Word.all.each do |answer|
+  n = Random.rand(3) +1
+  4.times do |t|
+    content = Faker::Lorem.word
+    correct = t == n
+    Answer.create(name: content, correct_answer: correct, word_id: answer.id)
+  end
+end

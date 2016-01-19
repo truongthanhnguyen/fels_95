@@ -14,7 +14,7 @@
           <td><%= category.id %></td>
           <td><b><%= category.name %></b></td>
           <td><%= category.description %></td>
-          <td><%= link_to t("category.start"), "#" %></td>
+          <td><%= link_to t("category.start"), category_lessons_path(category) %></td>
         </tr>
       <% end %>
     </table>
