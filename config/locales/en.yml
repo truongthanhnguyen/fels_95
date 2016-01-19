@@ -106,4 +106,5 @@ en:
   lesson:
     lesson: "Lesson"
     create_lesson_success: "create lesson successed!"
-
+    submit_success: "submit successed"
+    update_failed: "update failed"

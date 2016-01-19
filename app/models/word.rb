@@ -1,8 +1,7 @@
 class Word < ActiveRecord::Base
   belongs_to :category
-  belongs_to :result
   belongs_to :lesson
-  has_many :answers
+  has_many :answers, dependent: :destroy
   has_many :results
   accepts_nested_attributes_for :answers
 
@@ -39,7 +38,6 @@ class Word < ActiveRecord::Base
         result.save!
       end
     end
-
   end
 
   def correct_answer
