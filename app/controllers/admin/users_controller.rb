@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
-  before_action :admin_user
+  before_action :authenticate_admin
   before_action :load_user, only: [:edit, :update, :destroy]
 
   def index
@@ -47,14 +47,5 @@ class Admin::UsersController < ApplicationController
 
   def load_user
     @user = User.find params[:id]
-  end
-
-  def correct_user
-    @user = User.find params[:id]
-    redirect_to(root_url) unless @user == current_user
-  end
-
-  def admin_user
-    redirect_to(root_url) unless current_user.admin?
   end
 end
