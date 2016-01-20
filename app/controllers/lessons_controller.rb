@@ -9,6 +9,16 @@ class LessonsController < ApplicationController
   def show
   end
 
+  def update
+    if @lesson.update_attributes lesson_params
+      flash[:success] = t "lesson.submit_success"
+      redirect_to lesson_results_path @lesson
+    else
+      flash[:danger] = t "lesson.update_failed"
+      redirect_to root_url
+    end
+  end
+
   private
   def create_lesson
     @category = Category.find params[:category_id]
@@ -32,6 +42,10 @@ class LessonsController < ApplicationController
         redirect_to root_url
       end
     end
+  end
+
+  def lesson_params
+    params.required(:lesson).permit results_attributes: [:id, :word_id, :answer_id]
   end
 
   def load_lesson

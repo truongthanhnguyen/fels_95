@@ -1,6 +1,6 @@
 class Result < ActiveRecord::Base
   belongs_to :lesson
   belongs_to :word
-  has_many :words
-  has_many :answers
+  belongs_to :answer
+  scope :results_by_lesson, ->(lesson_id){where lesson_id: lesson_id}
 end
