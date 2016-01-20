@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   validates :name, presence: true, length: {maximum: 50}
-  validates :password, presence: true, length: {minimum: 6}
+  validates :password, presence: true, length: {minimum: 6}, allow_nil: true
   before_create :create_activation_digest
   before_save :downcase_email
   has_secure_password

@@ -108,3 +108,12 @@ en:
     create_lesson_success: "create lesson successed!"
     submit_success: "submit successed"
     update_failed: "update failed"
+
+  admin:
+    user:
+      user_deleted: "User've been deleted!"
+      delete: "delete"
+      you_sure: "You sure?"
+      admin: "Admin"
+      user_manage: "Manage user"
+      set_admin: "set admin"

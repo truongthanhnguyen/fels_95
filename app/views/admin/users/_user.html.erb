@@ -1,0 +1,15 @@
+<li>
+  <%= gravatar_for user, size: Settings.gravatarsize %>
+  <%= link_to user.name, user %>
+  <% unless current_user? user %>
+    <%= link_to t("admin.user.delete"), admin_user_path(user),
+      method: :delete, data: {confirm: t("admin.user.you_sure")}%>
+    <% if user.admin? %>
+      <%= link_to t("admin.user.admin"),
+       admin_user_path(user, "user[admin]": false), method: :put %>
+    <% else %>
+      <%= link_to t("admin.user.set_admin"),
+        admin_user_path(user, "user[admin]": true), method: :put %>
+    <% end %>
+  <% end %>
+</li>
