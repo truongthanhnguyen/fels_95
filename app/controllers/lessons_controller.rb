@@ -22,7 +22,7 @@ class LessonsController < ApplicationController
   private
   def create_lesson
     @category = Category.find params[:category_id]
-    lesson = Lesson.new category_id: @category.id, user_id: @current_user.id
+    lesson = Lesson.new category_id: @category.id, user_id: current_user.id
     @transaction_success = true
     Lesson.transaction do
       begin

@@ -1,0 +1,28 @@
+<div class="container">
+<section>
+  <div class="row">
+    <h1><%= t "category.all" %></h1>
+    <table class="table table-striped">
+      <tr>
+        <th>#</th>
+        <th><%= t "category.name" %></th>
+        <th><%= t "category.description" %></th>
+        <th><%= t "admin.category.action" %></th>
+      </tr>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.id %></td>
+          <td><b><%= category.name %></b></td>
+          <td><%= category.description %></td>
+          <td>
+            <%= link_to t("admin.category.edit2"), edit_admin_category_path(category) %>
+            <%= link_to t("admin.category.delete"), admin_category_path(category),
+              method: :delete, data: {confirm: t("admin.category.you_sure")} %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+    <li><%= link_to t("admin.categoty.create_category"),
+      new_admin_category_path %></li>
+  </div>
+</section>
