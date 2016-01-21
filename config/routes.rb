@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
-    root  "categories#index"
+    root "categories#index"
+    resources :categories do
+      resources :words, except: [:show]
+    end
     resources :users
     resources :categories, except: [:show]
   end

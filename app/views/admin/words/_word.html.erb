@@ -1,0 +1,13 @@
+<tr>
+  <td><%= word.name %>
+    <%= link_to t("admin.word.edit"), edit_admin_category_word_path(@category, word) %>
+    <%= link_to t("admin.word.delete"), admin_category_word_path(@category, word),
+      method: :delete, data: {confirm: t("admin.word.you_sure")}  %>
+  </td>
+  <% word.answers.each do |answer| %>
+    <td>
+      <%= answer.name %>
+      <i class="glyphicon glyphicon-<%= answer.correct_answer? ? "ok" : "remove" %>" ></i>
+    </td>
+  <% end %>
+</tr>

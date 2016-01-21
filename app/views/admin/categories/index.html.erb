@@ -16,6 +16,8 @@
           <td><%= category.description %></td>
           <td>
             <%= link_to t("admin.category.edit2"), edit_admin_category_path(category) %>
+            <%= link_to t("admin.category.create_word"),
+              admin_category_words_path(category) %>
             <%= link_to t("admin.category.delete"), admin_category_path(category),
               method: :delete, data: {confirm: t("admin.category.you_sure")} %>
           </td>
