@@ -77,6 +77,8 @@ en:
     activities_show: "Activities Show"
     category: "Category"
     lesson: "Lesson"
+    add_follow_user: "%{user_name} has followed %{content}"
+    add_lesson_activity: "%{user_name} has learned in %{content}"
 
   relationship:
     following: "following"

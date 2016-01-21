@@ -7,4 +7,5 @@ class Activity < ActiveRecord::Base
   validates :content, presence: true, length: {maximum: Settings.length_activity.maximum}
 
   scope :feed, ->(user_id){where FOLLOWING_QUERY, user_id: user_id}
+
 end

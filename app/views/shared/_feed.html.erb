@@ -1,6 +1,12 @@
-<% if @feed_items.any? %>
-  <ol class="activities">
-    <%= render @feed_items %>
-  </ol>
+<div class="activities">
+  <% @feed_items.each do |activity| %>
+    <div class="row">
+      <%= link_to gravatar_for(activity.user, size: Settings.gravatarsize), activity.user %>
+      <div class="col-md-10">
+        <%= link_to activity.user.name, "#" %>
+        <span><%= activity.content %></span>
+      </div>
+    </div>
+  <% end %>
   <%= will_paginate @feed_items %>
-<% end %>
+</div>

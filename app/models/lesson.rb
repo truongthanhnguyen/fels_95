@@ -6,6 +6,7 @@ class Lesson < ActiveRecord::Base
   has_many :results, dependent: :destroy
   validate :check_number_words_category
   accepts_nested_attributes_for :results
+  after_create :add_lesson_activity
 
   def numbers_correct_answer
     answers.number_correct_answer
@@ -17,5 +18,10 @@ class Lesson < ActiveRecord::Base
     if words_of_category < Settings.lesson.lessonsize
       flash[:danger] = t "word.not_enough"
     end
+  end
+
+  def add_lesson_activity
+    Activity.create user_id: user.id, user_name: user.name,
+      content: category.name, type_content: Settings.activity.LESSON_TYPE
   end
 end
