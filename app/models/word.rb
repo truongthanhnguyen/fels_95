@@ -3,7 +3,7 @@ class Word < ActiveRecord::Base
   belongs_to :lesson
   has_many :answers, dependent: :destroy
   has_many :results
-  accepts_nested_attributes_for :answers
+  accepts_nested_attributes_for :answers, allow_destroy: true
 
   LEARNED_WORDS = "id in (SELECT word_id from results where lesson_id in (
     select id from lessons where user_id = :user_id))"

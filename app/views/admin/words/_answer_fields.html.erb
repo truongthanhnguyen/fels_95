@@ -1,0 +1,11 @@
+<div class="nested-fields">
+  <div>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div>
+    <%= f.check_box :correct_answer %>
+  </div>
+  <div>
+    <%= link_to_remove_fields t("admin.word.remove"), f %>
+  </div>
+</div>

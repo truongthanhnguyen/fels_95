@@ -1,0 +1,15 @@
+<% provide :title, t("admin.word.words") %>
+<div class="row">
+  <h1><%= @category.name %></h1>
+  <table class="table table-striped">
+    <%= link_to t("admin.word.create_new_word"), new_admin_category_word_path %>
+    <tr>
+      <th><%= t "admin.word.words" %></th>
+      <% @answers_number.each do |answer| %>
+        <th><%= answer %></th>
+      <% end %>
+    </tr>
+    <%= render @words %>
+  </table>
+  <%= will_paginate %>
+</div>

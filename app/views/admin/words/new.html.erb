@@ -1,0 +1,23 @@
+<% provide :title, t("admin.word.create_word") %>
+<h1><%= t "admin.word.create_word" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @category, @word] do |f| %>
+      <%= render "shared/error_messages", object: @word %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+      <%= link_to_add_fields t("admin.word.add"), f, :answers  %>
+
+      <%= f.hidden_field :category_id, value: :category_id %>
+      <%= f.label :answers %>
+
+      <%= f.fields_for :answers do |answer| %>
+        <div>
+          <%= render "answer_fields", f: answer %>
+        </div>
+      <% end %>
+      <%= f.submit t("admin.category.save"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

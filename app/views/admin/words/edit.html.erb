@@ -1,0 +1,18 @@
+<% provide :title, t("admin.word.edit") %>
+<h1><%= t "admin.word.edit_word" %></h1>
+<%= form_for [:admin, @category, @word] do |f| %>
+  <%= render "shared/error_messages", object: @word %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+    <%= link_to_add_fields t("answer.add"), f, :answers %>
+  </div>
+  <%= f.hidden_field :category_id, value: :category_id %>
+  <%= f.label :answers %>
+  <div>
+    <%= f.fields_for :answers do |answer| %>
+      <%= render "answer_fields", f: answer %>
+    <% end %>
+  </div>
+  <%= f.submit t("admin.word.submit") %>
+<% end %>
